@@ -28,5 +28,18 @@ Navigate to [http://localhost:8080](http://localhost:8080)
 curl http://localhost:8080/api/users
 ```
 
+## Examples
+
+```shell
+curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "c", "lastname": "d" }'    
+
+{"firstname":"c","lastname":"d"}
+```
+
+```shell
+curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "c" }'                 
+{"errors":[{"code":"bad_request","message":"Object has missing required properties ([\"lastname\"])"}]}%
+```
+ 
 ## License
 MIT

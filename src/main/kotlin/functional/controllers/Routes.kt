@@ -18,7 +18,7 @@ class Routes(private val userHandler: UserHandler) {
             accept(APPLICATION_JSON).nest {
                 GET("/users", userHandler::findAll)
             }
-            accept(TEXT_EVENT_STREAM).nest {
+            accept(APPLICATION_JSON).nest {
                 POST("/users", userHandler::create)
             }
 

@@ -19,7 +19,9 @@ class UserHandler {
     fun findAll(req: ServerRequest): Mono<ServerResponse> = Validate
             .request(req) { ok().body(users) }
 
-    fun create(req: ServerRequest) = Validate
-            .request(req)
-            .withBody(User::class.java) { body -> ok().body(Mono.just(body)) }
+    fun create(req: ServerRequest): Mono<ServerResponse> {
+        return Validate
+                .request(req)
+                .withBody(User::class.java) { body -> ok().body(Mono.just(body)) }
+    }
 }

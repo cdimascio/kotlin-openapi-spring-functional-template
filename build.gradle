@@ -65,8 +65,9 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 
-    compile 'io.github.cdimascio:java-dotenv:0.6.1'
+    compile 'io.github.cdimascio:java-dotenv:0.7.1'
     compile 'io.github.cdimascio:swagger-spring-functional:0.6.2'
+    compile 'io.github.cdimascio:swagger-spring-functional:0.6.2:sources'
 
 	compile("org.springframework:spring-webflux")
 	compile("org.springframework:spring-context")
