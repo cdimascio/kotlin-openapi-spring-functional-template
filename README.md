@@ -8,8 +8,16 @@ A simple project template for kotlin spring webflux with interactive api documen
 ./gradlew build
 ```
 
+## Run
+
 ```shell
 ./gradlew run
+```
+
+## Test
+
+```shell
+./gradlew test
 ```
 
 ## Try
