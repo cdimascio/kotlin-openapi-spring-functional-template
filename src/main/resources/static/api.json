@@ -1,0 +1,117 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Watson Adaptive Learning extension for Makers Conversation",
+    "license": {
+      "name": "IBM"
+    }
+  },
+  "basePath": "/adaptive_learning_ext/api/v1",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/message": {
+      "post": {
+        "tags": [
+          "Learner Model"
+        ],
+        "description": "Create a new model",
+        "parameters": [
+          {
+            "name": "message",
+            "description": "The message for the turn",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MessageRequest"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created the model"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "MessageRequest": {
+      "required": [
+        "input"
+      ],
+      "properties": {
+        "input": {
+          "type": "object",
+          "required": [
+            "text",
+            "palette",
+            "canvas"
+          ],
+          "properties": {
+            "text": {
+              "type": "string"
+            },
+            "palette": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Element"
+              }
+            },
+            "canvas": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Element"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Element": {
+      "required": [
+        "id",
+        "name",
+        "tags"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Error": {
+      "required": [
+        "code",
+        "message"
+      ],
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
