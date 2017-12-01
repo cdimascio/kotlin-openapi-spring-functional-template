@@ -1,7 +1,7 @@
 package functional.controllers
 
 import functional.models.User
-import functional.swagger.validators.Validate
+import functional.validate
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok
@@ -16,11 +16,11 @@ class UserHandler {
             User("eliana", "g"),
             User("laura", "h"))
 
-    fun findAll(req: ServerRequest): Mono<ServerResponse> = Validate
+    fun findAll(req: ServerRequest): Mono<ServerResponse> = validate
             .request(req) { ok().body(users) }
 
     fun create(req: ServerRequest): Mono<ServerResponse> {
-        return Validate
+        return validate
                 .request(req)
                 .withBody(User::class.java) { body -> ok().body(Mono.just(body)) }
     }

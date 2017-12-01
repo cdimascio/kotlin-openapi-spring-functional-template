@@ -1,7 +1,9 @@
 package functional
 
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import io.cdimascio.Dotenv
+import functional.models.Error
+import io.github.cdimascio.Dotenv
+import io.github.cdimascio.swagger.Validate
 
-val mapper = jacksonObjectMapper()
+val validate = Validate.configure("static/api.json") { Error(messages=it) }
+
 val dotenv = Dotenv.configure().useResourceDirectory().build()

@@ -21,19 +21,19 @@ class IntegrationTests {
 		application.start()
 	}
 	
-	@Test
-	fun `Find all users on via users endpoint`() {
-		client.get().uri("/api/users")
-				.accept(APPLICATION_JSON)
-				.retrieve()
-				.bodyToFlux<User>()
-				.test()
-				.expectNextMatches { it.firstName == "Foo" && it.lastName == "Foo" }
-				.expectNextMatches { it.firstName == "Bar" && it.lastName == "Bar" }
-				.expectNextMatches { it.firstName == "Baz" && it.lastName == "Baz" }
-				.verifyComplete()
-	}
-	
+//	@Test
+//	fun `Find all users on via users endpoint`() {
+//		client.get().uri("/api/users")
+//				.accept(APPLICATION_JSON)
+//				.retrieve()
+//				.bodyToFlux<User>()
+//				.test()
+//				.expectNextMatches { it.firstName == "Foo" && it.lastName == "Foo" }
+//				.expectNextMatches { it.firstName == "Bar" && it.lastName == "Bar" }
+//				.expectNextMatches { it.firstName == "Baz" && it.lastName == "Baz" }
+//				.verifyComplete()
+//	}
+//
 	@AfterAll
 	fun afterAll() {
 		application.stop()

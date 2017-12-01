@@ -50,24 +50,19 @@ jar {
     }
 }
 
-
 dependencyManagement {
 	imports {
 		// Should use Spring IO platform milestone or release when available
-		mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.0.M6")
+		mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.0.M7")
 	}
 }
-
-
-
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 
     compile 'io.github.cdimascio:java-dotenv:0.7.1'
-    compile 'io.github.cdimascio:swagger-spring-functional:0.6.2'
-    compile 'io.github.cdimascio:swagger-spring-functional:0.6.2:sources'
+    compile 'io.github.cdimascio:swagger-spring-functional:0.7.1'
 
 	compile("org.springframework:spring-webflux")
 	compile("org.springframework:spring-context")
@@ -75,7 +70,10 @@ dependencies {
 
     compile("io.projectreactor.ipc:reactor-netty")
 
+    // shouldn't need
     compile("com.fasterxml.jackson.module:jackson-module-kotlin")
+    compile ("com.atlassian.oai:swagger-request-validator-core:1.3.0")
+
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.0"
 
