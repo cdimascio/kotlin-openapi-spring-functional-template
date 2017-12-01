@@ -1,7 +1,7 @@
 buildscript {
     ext {
         kotlinVersion = '1.2.0'
-        springBootVersion = '2.0.0.M6'
+        springBootVersion = '2.0.0.M7'
     }
     repositories {
         jcenter()
@@ -53,7 +53,7 @@ jar {
 dependencyManagement {
 	imports {
 		// Should use Spring IO platform milestone or release when available
-		mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.0.M7")
+		mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
 	}
 }
 
@@ -66,7 +66,7 @@ dependencies {
 
 	compile("org.springframework:spring-webflux")
 	compile("org.springframework:spring-context")
-    compile("org.springframework.boot:spring-boot-starter-webflux:2.0.0.M6")
+    compile("org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}")
 
     compile("io.projectreactor.ipc:reactor-netty")
 
