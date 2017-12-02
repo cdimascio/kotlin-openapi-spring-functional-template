@@ -1,5 +1,6 @@
 package functional.controllers
 
+import functional.internalServerError
 import functional.models.User
 import functional.validate
 import org.springframework.web.reactive.function.server.ServerRequest
@@ -18,10 +19,10 @@ class UserHandler {
 
     fun findAll(req: ServerRequest): Mono<ServerResponse> = validate
             .request(req) { ok().body(users) }
+            .onErrorResume { t -> internalServerError(t) }
 
-    fun create(req: ServerRequest): Mono<ServerResponse> {
-        return validate
-                .request(req)
-                .withBody(User::class.java) { body -> ok().body(Mono.just(body)) }
-    }
+    fun create(req: ServerRequest) = validate
+            .request(req)
+            .withBody(User::class.java) { body -> ok().body(Mono.just(body)) }
+            .onErrorResume { t-> internalServerError(t) }
 }

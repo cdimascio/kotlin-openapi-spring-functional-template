@@ -10,18 +10,14 @@ import reactor.ipc.netty.tcp.BlockingNettyContext
 class Application {
 	
 	private val httpHandler: HttpHandler
-	
 	private val server: HttpServer
-
 	private var nettyContext: BlockingNettyContext? = null
-
 
 	constructor(port: Int = dotenv["PORT"]?.toInt() ?: 8080) {
 		val context = GenericApplicationContext().apply {
 			beans().initialize(this)
 			refresh()
 		}
-
 		server = HttpServer.create(port)
 		httpHandler = WebHttpHandlerBuilder.applicationContext(context).build()
 	}
