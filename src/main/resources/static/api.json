@@ -48,8 +48,8 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Create a user"
+          "200": {
+            "description": "Echo the request inputs"
           }
         }
       }
