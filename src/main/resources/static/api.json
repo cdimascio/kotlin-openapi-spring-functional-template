@@ -24,7 +24,7 @@
         "tags": [
           "Users"
         ],
-        "description": "Get users",
+        "description": "Get hardcoded users",
         "responses": {
           "200": {
             "description": "Returns the users"
@@ -35,7 +35,7 @@
         "tags": [
           "Users"
         ],
-        "description": "Create a user",
+        "description": "Echo back the user specified in the request",
         "parameters": [
           {
             "name": "user",
