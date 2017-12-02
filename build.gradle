@@ -59,8 +59,7 @@ dependencyManagement {
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
-//    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jre8', version: '1.2.0'
-	compile("org.jetbrains.kotlin:kotlin-reflect")
+	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
     compile 'io.github.cdimascio:java-dotenv:0.7.1'
     compile 'io.github.cdimascio:swagger-spring-functional:0.8.0'
@@ -70,10 +69,6 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}")
 
     compile("io.projectreactor.ipc:reactor-netty")
-
-    // shouldn't need
-    compile("com.fasterxml.jackson.module:jackson-module-kotlin")
-    compile ("com.atlassian.oai:swagger-request-validator-core:1.3.0")
 
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.0"
