@@ -52,7 +52,7 @@ result
 }
 ```
 
-POST to `/users` with an *invalid* request body
+POST to `/users` with an *invalid* request body i.e. we leave off the required field `lastname`
 
 ```shell
 curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "carmine" }'
