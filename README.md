@@ -5,6 +5,8 @@ A simple project template for kotlin spring webflux with interactive api documen
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.jpeg?raw=tru)
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true)
 
+The Swagger specification is defined in `main/resources/static/api.json`
+
 ## Usage
 
 clone this repo
