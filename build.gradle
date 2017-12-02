@@ -58,11 +58,12 @@ dependencyManagement {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8")
+    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
+//    compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jre8', version: '1.2.0'
 	compile("org.jetbrains.kotlin:kotlin-reflect")
 
     compile 'io.github.cdimascio:java-dotenv:0.7.1'
-    compile 'io.github.cdimascio:swagger-spring-functional:0.7.1'
+    compile 'io.github.cdimascio:swagger-spring-functional:0.8.0'
 
 	compile("org.springframework:spring-webflux")
 	compile("org.springframework:spring-context")
