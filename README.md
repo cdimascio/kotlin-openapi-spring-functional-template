@@ -1,6 +1,6 @@
 # kotlin-swagger-spring-functional
 
-A simple project template for kotlin spring webflux with interactive api documentation and api request validation for a given Swagger v2 specification. Also includes environment driven config via java-dotenv
+A simple project template for kotlin spring webflux with interactive api documentation and api request validation. It validates requests against a given Swagger v2 specification. The template also includes environment based config using java-dotenv
 
 ## Build
 
@@ -28,17 +28,36 @@ Navigate to [http://localhost:8080](http://localhost:8080)
 curl http://localhost:8080/api/users
 ```
 
-## Examples
+## Try the example endpoints
+
+POST to `/users` with a valid request body
 
 ```shell
-curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "c", "lastname": "d" }'    
-
-{"firstname":"c","lastname":"d"}
+curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "carmine", "lastname": "dimascio" }'    
 ```
 
+result
+
+```json
+{
+  "firstname":"carmine",
+  "lastname":"dimascio"
+}
+```
+
+POST to `/users` with an invalid request body
 ```shell
-curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "c" }'                 
-{"errors":[{"code":"bad_request","message":"Object has missing required properties ([\"lastname\"])"}]}%
+curl -X POST http://localhost:8080/api/users -H "Content-Type: application/json" -d '{ "firstname": "carmine" }'
+```
+
+result
+
+```json
+{
+  "errors":[{
+    "code":"bad_request",
+    "message":"Object has missing required properties ([\"lastname\"])"}
+]}
 ```
  
 ## License
