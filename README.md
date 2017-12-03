@@ -29,6 +29,22 @@ clone this repo
 ./gradlew test
 ```
 
+## Dist
+
+```shell
+./gradlew clean distZip
+```
+
+## Deploy the standalone dist
+
+copy build/kotlin-swagger-spring-functional.zip to some location e.g. `$HOME` 
+
+```shell
+unzip $HOME/kotlin-swagger-spring-functional-1.0.0.zip
+$HOME/kotlin-swagger-spring-functional-1.0.0/bin/kotlin-swagger-spring-functional
+
+```
+
 ## Try
 
 ```xml
