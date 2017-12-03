@@ -8,4 +8,4 @@ val validate = Validate.configure("static/api.json") { status, messages ->
     Error(status.value(), messages)
 }
 
-val dotenv = Dotenv.configure().useResourceDirectory().build()
+val dotenv = Dotenv.configure().build()

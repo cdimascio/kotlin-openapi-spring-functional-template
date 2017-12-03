@@ -61,7 +61,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
-    compile 'io.github.cdimascio:java-dotenv:0.7.1'
+    compile 'io.github.cdimascio:java-dotenv:1.1.0'
     compile 'io.github.cdimascio:swagger-spring-functional:0.8.0'
 
 	compile("org.springframework:spring-webflux")
