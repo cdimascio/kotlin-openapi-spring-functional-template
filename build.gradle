@@ -9,7 +9,7 @@ buildscript {
         maven { url "https://repo.spring.io/snapshot" }
         maven { url "https://repo.spring.io/milestone" }
         maven { url 'https://repo.spring.io/libs-milestone' }
-        maven { url  "https://jcenter.bintray.com" }
+        maven { url "https://jcenter.bintray.com" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
@@ -51,21 +51,21 @@ jar {
 }
 
 dependencyManagement {
-	imports {
-		// Should use Spring IO platform milestone or release when available
-		mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
-	}
+    imports {
+        // Should use Spring IO platform milestone or release when available
+        mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+    }
 }
 
 dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
-	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+    compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
     compile 'io.github.cdimascio:java-dotenv:1.2.0'
     compile 'io.github.cdimascio:swagger-spring-functional:0.8.0'
 
-	compile("org.springframework:spring-webflux")
-	compile("org.springframework:spring-context")
+    compile("org.springframework:spring-webflux")
+    compile("org.springframework:spring-context")
     compile("org.springframework.boot:spring-boot-starter-webflux:${springBootVersion}")
 
     compile("io.projectreactor.ipc:reactor-netty")
@@ -73,13 +73,13 @@ dependencies {
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
     compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.0"
 
-	compile("org.slf4j:slf4j-api")
-	compile("ch.qos.logback:logback-classic")
+    compile("org.slf4j:slf4j-api")
+    compile("ch.qos.logback:logback-classic")
 
 
-	testCompile("io.projectreactor:reactor-test")
+    testCompile("io.projectreactor:reactor-test")
 
     testCompile("org.junit.jupiter:junit-jupiter-api")
-	testRuntime("org.junit.jupiter:junit-jupiter-engine")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine")
 }
 
