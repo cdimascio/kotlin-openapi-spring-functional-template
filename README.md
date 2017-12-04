@@ -1,6 +1,10 @@
 # kotlin-swagger-spring-functional
 
-A simple project template for kotlin spring webflux with interactive api documentation and api request validation. It validates requests against a given Swagger v2 specification. The template also includes environment based config using java-dotenv
+A simple project template for kotlin spring webflux with interactive api documentation and api request validation. It validates requests against a given Swagger v2 specification. 
+
+The template uses:
+ - [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional) to validate API endpoints - provides ability to customize the error shape
+ - [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
 
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.jpeg?raw=tru)
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true)
