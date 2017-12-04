@@ -1,0 +1,138 @@
+{
+  "name": "cdimascio/kotlin-swagger-spring-functional-template",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/cdimascio/kotlin-swagger-spring-functional-template",
+          "text": "GitHub"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "kotlin-swagger-spring-functional-template",
+      "subhead": "Kotlin Webflux functional application with api request validation and interactive api doc",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "kotlin-swagger-spring-functional-template: Kotlin Webflux functional application with api request validation and interactive api doc",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "cdimascio",
+          "repo": "kotlin-swagger-spring-functional-template"
+        }
+      ]
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1>kotlin-swagger-spring-functional</h1>\n<p>A simple project template for kotlin spring webflux with interactive api documentation and api request validation. It validates requests against a given Swagger v2 specification. The template also includes environment based config using java-dotenv</p>\n<p><img src=\"https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.jpeg?raw=tru\">\n<img src=\"https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true\"></p>\n<p>The Swagger specification is defined in <code>main/resources/static/api.json</code> and is used to drive both the interactive doc and api validation.</p>\n<h2>Usage</h2>\n<p>clone this repo</p>\n<h2>Build</h2>\n<pre>./gradlew build</pre><h2>Run</h2>\n<pre>./gradlew run</pre><h2>Test</h2>\n<pre>./gradlew test</pre><h2>Dist</h2>\n<pre>./gradlew clean distZip</pre><h2>Deploy the standalone dist</h2>\n<p>copy build/kotlin-swagger-spring-functional.zip to some location e.g. <code>$HOME</code> </p>\n<pre>unzip $HOME/kotlin-swagger-spring-functional-1.0.0.zip\n$HOME/kotlin-swagger-spring-functional-1.0.0/bin/kotlin-swagger-spring-functional</pre><h2>Try</h2>\n<pre>curl http://localhost:8080/api/users</pre><h2>Try the example endpoints (with swagger validation)</h2>\n<p>POST to <code>/users</code> with a <em>valid</em> request body</p>\n<pre>curl -X POST http://localhost:8080/api/users -H &quot;Content-Type: application/json&quot; -d &apos;{ &quot;firstname&quot;: &quot;carmine&quot;, &quot;lastname&quot;: &quot;dimascio&quot; }&apos;</pre><p>result</p>\n<pre>{\n  <span class=\"hljs-attr\">&quot;firstname&quot;</span>:<span class=\"hljs-string\">&quot;carmine&quot;</span>,\n  <span class=\"hljs-attr\">&quot;lastname&quot;</span>:<span class=\"hljs-string\">&quot;dimascio&quot;</span>\n}</pre><p>POST to <code>/users</code> with an <em>invalid</em> request body i.e. we leave off the required field <code>lastname</code></p>\n<pre>curl -X POST http://localhost:8080/api/users -H &quot;Content-Type: application/json&quot; -d &apos;{ &quot;firstname&quot;: &quot;carmine&quot; }&apos;</pre><p>result</p>\n<pre>{\n  <span class=\"hljs-attr\">&quot;errors&quot;</span>:[{\n    <span class=\"hljs-attr\">&quot;code&quot;</span>:<span class=\"hljs-string\">&quot;bad_request&quot;</span>,\n    <span class=\"hljs-attr\">&quot;message&quot;</span>:<span class=\"hljs-string\">&quot;Object has missing required properties ([\\&quot;lastname\\&quot;])&quot;</span>}\n]}</pre><h2>Try the Interactive API documentation</h2>\n<p>Navigate to <a href=\"http://localhost:8080\">http://localhost:8080</a></p>\n<p><img src=\"https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/swagger1.png?raw=true\"></p>\n<p><img src=\"https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/swagger2.png?raw=true\"></p>\n<h2>License</h2>\n<p>Apache 2</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/cdimascio/kotlin-swagger-spring-functional-template",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/cdimascio",
+          "text": "cdimascio"
+        }
+      ]
+    }
+  ]
+}
