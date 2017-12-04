@@ -13,7 +13,7 @@ buildscript {
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
         classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
         classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.1")
     }
@@ -58,10 +58,10 @@ dependencyManagement {
 }
 
 dependencies {
-    compile("org.jetbrains.kotlin:kotlin-stdlib-jre8:${kotlinVersion}")
+    compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
 	compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
-    compile 'io.github.cdimascio:java-dotenv:1.1.0'
+    compile 'io.github.cdimascio:java-dotenv:1.2.0'
     compile 'io.github.cdimascio:swagger-spring-functional:0.8.0'
 
 	compile("org.springframework:spring-webflux")
