@@ -8,7 +8,7 @@ The template uses:
  - [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional) to validate API endpoints - provides ability to customize the error shape
  - [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
 
-![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.jpeg?raw=tru)
+![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.png?raw=tru)
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true)
 
 The Swagger specification is defined in `main/resources/static/api.json` and is used to drive both the interactive doc and api validation.
