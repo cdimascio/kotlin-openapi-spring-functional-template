@@ -1,5 +1,7 @@
 # kotlin-swagger-spring-functional
 
+![](https://img.shields.io/badge/build-passing-green.svg)![](https://img.shields.io/badge/tests-passing-green.svg)![](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
+
 A simple project template for kotlin spring webflux with interactive api documentation and api request validation. It validates requests against a given Swagger v2 specification. 
 
 The template uses:
