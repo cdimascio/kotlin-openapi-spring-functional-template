@@ -1,31 +1,28 @@
 buildscript {
     ext {
-        kotlinVersion = '1.2.0'
+        kotlinVersion = '1.2.10'
         springBootVersion = '2.0.0.M7'
     }
     repositories {
         jcenter()
-        mavenCentral()
-        maven { url "https://repo.spring.io/snapshot" }
         maven { url "https://repo.spring.io/milestone" }
-        maven { url 'https://repo.spring.io/libs-milestone' }
-        maven { url "https://jcenter.bintray.com" }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
-        classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
-        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.1")
+        classpath("org.junit.platform:junit-platform-gradle-plugin:1.0.2")
+        classpath("org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.8.2")
     }
 }
 
 apply plugin: 'kotlin'
-apply plugin: 'kotlin-spring'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'application'
+apply plugin: "jacoco"
+apply plugin: 'org.junit.platform.gradle.plugin'
+apply plugin: "com.github.kt3k.coveralls"
 
 mainClassName = 'functional.ApplicationKt'
-
 
 version = '1.0.0'
 sourceCompatibility = 1.8
@@ -40,7 +37,6 @@ compileTestKotlin {
 
 repositories {
     mavenCentral()
-    maven { url "https://repo.spring.io/snapshot" }
     maven { url "https://repo.spring.io/milestone" }
 }
 
@@ -50,9 +46,15 @@ jar {
     }
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
+
 dependencyManagement {
     imports {
-        // Should use Spring IO platform milestone or release when available
         mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
     }
 }
@@ -62,7 +64,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
     compile 'io.github.cdimascio:java-dotenv:1.2.0'
-    compile 'io.github.cdimascio:swagger-spring-functional:0.8.0'
+    compile 'io.github.cdimascio:swagger-spring-functional:0.8.1'
 
     compile("org.springframework:spring-webflux")
     compile("org.springframework:spring-context")
@@ -76,9 +78,7 @@ dependencies {
     compile("org.slf4j:slf4j-api")
     compile("ch.qos.logback:logback-classic")
 
-
     testCompile("io.projectreactor:reactor-test")
-
     testCompile("org.junit.jupiter:junit-jupiter-api")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
 }
