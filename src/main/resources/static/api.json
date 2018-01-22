@@ -68,6 +68,10 @@
         "lastname": {
           "type": "string"
         }
+      },
+      "example": {
+        "firstname": "carmine",
+        "lastname": "d"
       }
     }
   }
