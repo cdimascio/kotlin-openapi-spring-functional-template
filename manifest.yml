@@ -1,0 +1,4 @@
+applications:
+- name: kotlin-spring-swagger
+  path: build/distributions/kotlin-swagger-spring-functional-template-1.0.1.zip
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
