@@ -78,6 +78,8 @@ dependencies {
     compile("org.slf4j:slf4j-api")
     compile("ch.qos.logback:logback-classic")
 
+    runtime files('src/main/resources')
+
     testCompile("io.projectreactor:reactor-test")
     testCompile("org.junit.jupiter:junit-jupiter-api")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
