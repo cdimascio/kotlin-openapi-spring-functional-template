@@ -2,6 +2,8 @@ buildscript {
     ext {
         kotlinVersion = '1.2.10'
         springBootVersion = '2.0.0.M7'
+        distName = "kotlin-swagger-spring-functional-template"
+        distVersion = '1.2.0'
     }
     repositories {
         jcenter()
@@ -25,7 +27,7 @@ apply plugin: "com.github.kt3k.coveralls"
 
 mainClassName = 'functional.ApplicationKt'
 
-version = '1.0.1'
+version = distVersion
 sourceCompatibility = 1.8
 
 compileKotlin {
@@ -94,7 +96,7 @@ dependencies {
 }
 
 task unzip(type: Copy) {
-    def zipFile = file('build/distributions/ep-makers-conversation-1.0.1.zip')
+    def zipFile = file("build/distributions/${distName}-${distVersion}.zip")
     def outputDir = file("${buildDir}/unpacked/dist")
 
     from zipTree(zipFile)
