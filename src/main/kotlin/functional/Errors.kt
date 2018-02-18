@@ -19,7 +19,6 @@ fun internalServerError(t: Throwable) = error(HttpStatus.INTERNAL_SERVER_ERROR, 
 fun unsupportedMediaType(t: Throwable) = error(HttpStatus.UNSUPPORTED_MEDIA_TYPE, t)
 fun unsupportedMediaType(message: String) = error(HttpStatus.UNSUPPORTED_MEDIA_TYPE, message)
 
-
 private fun error(status: HttpStatus, message: String): Mono<ServerResponse> {
     val error = Error(status.value(), listOf(message))
     return status(status).body(Mono.just(error))
