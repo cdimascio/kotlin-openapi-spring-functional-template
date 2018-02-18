@@ -2,16 +2,23 @@
 
 ![](https://api.travis-ci.org/cdimascio/kotlin-swagger-spring-functional-template.svg?branch=master)![](https://img.shields.io/badge/tests-passing-green.svg)![](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
-A simple project template for kotlin spring webflux with interactive api documentation and api request validation. It validates requests against a given Swagger v2 specification. 
+A project template for kotlin spring webflux. The template inludes automatic request validatation, interactive api documentation, 12-factor compliant environment based config, and built in linting. Interactive api documentaion and automatic request validation are executed against a given Swagger v2 definition. 
 
 The template uses:
- - [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional) to validate API endpoints - provides ability to customize the error shape
- - [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
+
+* [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional) to validate API endpoints. It also provides ability to customize the error shape
+* [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
 
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.png?raw=tru)
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true)
 
-The Swagger specification is defined in `main/resources/static/api.json` and is used to drive both the interactive doc and api validation.
+### What's included?
+* Automatic request validation via [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional)
+* Environment based config via [java-dotenv](https://github.com/cdimascio/java-dotenv)
+* Interactive API documentation via [Swagger UI](https://swagger.io/swagger-ui/)
+* Automatic linting via [ktlint](ktlint.github.io)
+
+Request validation and interactive documentation are based on a Swagger v2 api definition. The definition is located at `main/resources/static/api.json`.
 
 ## Usage
 
@@ -29,6 +36,14 @@ clone this repo
 ./gradlew run
 ```
 
+
+## Lint
+
+```shell
+./gradlew ktlint
+```
+
+
 ## Test
 
 ```shell
@@ -41,23 +56,35 @@ clone this repo
 ./gradlew clean distZip
 ```
 
-## Deploy the standalone dist
+Output artifact located at `build/distributions`
 
-copy build/kotlin-swagger-spring-functional.zip to some location e.g. `$HOME` 
+or unpacked
 
 ```shell
-unzip $HOME/kotlin-swagger-spring-functional-1.0.0.zip
+./gradlew clean distZip unzip
+```
+
+Output artifact located at `build/unpacked/dist`
+
+## Run the standalone dist
+
+Create an unpacked dist. See the [Dist](#dist) section above. Then run it
+
+```shell
+cp build/unpacked/dist $HOME
 $HOME/kotlin-swagger-spring-functional-1.0.0/bin/kotlin-swagger-spring-functional
 
 ```
 
-## Try
+## Try It!
+
+[Run](#run) the app or run the [standalone dist](#run-the-standalone-dist), then:
 
 ```xml
 curl http://localhost:8080/api/users
 ```
 
-## Try the example endpoints (with swagger validation)
+### Try the example endpoints (with swagger validation)
 
 POST to `/users` with a *valid* request body
 
@@ -90,7 +117,7 @@ result
 ]}
 ```
 
-## Try the Interactive API documentation
+### Try the Interactive API documentation
  
 Navigate to [http://localhost:8080](http://localhost:8080)
 
