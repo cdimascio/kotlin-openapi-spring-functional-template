@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        kotlinVersion = '1.2.21'
-        springBootVersion = '2.0.0.RC1'
+        kotlinVersion = '1.2.30'
+        springBootVersion = '2.0.0.RELEASE'
         distName = "kotlin-swagger-spring-functional-template"
-        distVersion = '1.2.0'
+        distVersion = '1.2.1'
     }
     repositories {
         jcenter()
