@@ -1,9 +1,12 @@
 package functional.controllers
 
+import functional.internalServerError
 import org.springframework.core.io.ClassPathResource
+import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.TEXT_HTML
 import org.springframework.web.reactive.function.server.ServerResponse.permanentRedirect
+import org.springframework.web.reactive.function.server.ServerResponse.status
 import org.springframework.web.reactive.function.server.router
 import java.net.URI
 
@@ -20,5 +23,12 @@ class Routes(private val userHandler: UserHandler) {
             }
         }
         resources("/**", ClassPathResource("static/"))
+    }
+    .filter { request, next ->
+        try {
+            next.handle(request)
+        } catch (ex: Exception) {
+            internalServerError(ex)
+        }
     }
 }
