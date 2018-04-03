@@ -21,5 +21,4 @@ class UserHandler(val userService: UserService) {
         .withBody(User::class.java) { user ->
             ok().body(userService.create(user))
         }
-
 }
