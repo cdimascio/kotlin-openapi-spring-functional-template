@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        kotlinVersion = '1.2.30'
-        springBootVersion = '2.0.0.RELEASE'
+        kotlinVersion = '1.2.50'
+        springBootVersion = '2.0.3.RELEASE'
         distName = "kotlin-swagger-spring-functional-template"
-        distVersion = '1.2.1'
+        distVersion = '1.2.2'
     }
     repositories {
         jcenter()
@@ -71,7 +71,7 @@ dependencies {
     compile("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
     compile("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
 
-    compile 'io.github.cdimascio:java-dotenv:3.0.0'
+    compile 'io.github.cdimascio:java-dotenv:3.1.1'
     compile 'io.github.cdimascio:swagger-spring-functional:0.8.2'
 
     compile("org.springframework:spring-webflux")
@@ -81,7 +81,7 @@ dependencies {
     compile("io.projectreactor.ipc:reactor-netty")
 
     compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310")
-    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.0"
+    compile "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.6"
 
     compile("org.slf4j:slf4j-api")
     compile("ch.qos.logback:logback-classic")
@@ -92,7 +92,7 @@ dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api")
     testRuntime("org.junit.jupiter:junit-jupiter-engine")
 
-    ktlint "com.github.shyiko:ktlint:0.14.0"
+    ktlint "com.github.shyiko:ktlint:0.23.1"
 }
 
 task unzip(type: Copy) {
