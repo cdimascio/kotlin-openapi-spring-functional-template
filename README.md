@@ -2,7 +2,7 @@
 
 ![](https://api.travis-ci.org/cdimascio/kotlin-swagger-spring-functional-template.svg?branch=master)![](https://img.shields.io/badge/tests-passing-green.svg)![](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
-A project template for kotlin spring webflux. The template inludes automatic request validatation, interactive api documentation, 12-factor compliant environment based config, and built in linting. Interactive api documentaion and automatic request validation are executed against a given Swagger v2 definition. 
+A project template for Kotlin Spring WebFlux. The template includes automatic request validation, interactive API documentation, 12-factor compliant environment based config, and built in linting. Interactive API documentation and automatic request validation are executed against a given Swagger v2 definition. 
 
 The template uses:
 
@@ -18,7 +18,7 @@ The template uses:
 * Interactive API documentation via [Swagger UI](https://swagger.io/swagger-ui/)
 * Automatic linting via [ktlint](ktlint.github.io)
 
-Request validation and interactive documentation are based on a Swagger v2 api definition. The definition is located at `main/resources/static/api.json`.
+Request validation and interactive documentation are based on a Swagger v2 API definition. The definition is located at `main/resources/static/api.json`.
 
 ## Usage
 
@@ -127,4 +127,5 @@ Navigate to [http://localhost:8080](http://localhost:8080)
 
  
 ## License
+
 Apache 2
