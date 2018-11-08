@@ -10,7 +10,7 @@ import reactor.netty.DisposableServer
 import reactor.netty.http.server.HttpServer
 // import reactor.ipc.netty.http.server.HttpServer
 // import reactor.ipc.netty.tcp.BlockingNettyContext
-//import reactor.netty.http.server.HttpServer
+// import reactor.netty.http.server.HttpServer
 import java.time.Duration
 
 class Application(port: Int = dotenv["PORT"]?.toInt() ?: 8080) {
@@ -26,7 +26,6 @@ class Application(port: Int = dotenv["PORT"]?.toInt() ?: 8080) {
 //        nettyContext = server.start(ReactorHttpHandlerAdapter(httpHandler))
 //        val adapter = ReactorHttpHandlerAdapter(handler)
 //        server.newHandler(adapter)
-
 
         server.bindUntilJavaShutdown(Duration.ofSeconds(5)) {
             disposableServer = it
