@@ -1,6 +1,5 @@
-package functional
+package functional.common
 
-import functional.models.Error
 import io.github.cdimascio.dotenv.dotenv
 import io.github.cdimascio.swagger.Validate
 

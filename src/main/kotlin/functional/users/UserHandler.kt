@@ -1,8 +1,6 @@
-package functional.controllers
+package functional.users
 
-import functional.models.User
-import functional.services.UserService
-import functional.validate
+import functional.common.validate
 import org.springframework.web.reactive.function.server.ServerRequest
 import org.springframework.web.reactive.function.server.ServerResponse
 import org.springframework.web.reactive.function.server.ServerResponse.ok

@@ -1,6 +1,6 @@
 package functional
 
-import functional.models.User
+import functional.users.User
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.Test

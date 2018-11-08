@@ -1,6 +1,7 @@
-package functional.controllers
+package functional
 
-import functional.internalServerError
+import functional.common.internalServerError
+import functional.users.UserHandler
 import org.springframework.core.io.ClassPathResource
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.http.MediaType.TEXT_HTML

@@ -1,6 +1,5 @@
-package functional.services
+package functional.users
 
-import functional.models.User
 import reactor.core.publisher.Flux
 import reactor.core.publisher.Mono
 

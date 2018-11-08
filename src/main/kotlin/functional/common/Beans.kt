@@ -1,8 +1,8 @@
-package functional
+package functional.common
 
-import functional.controllers.Routes
-import functional.controllers.UserHandler
-import functional.services.UserService
+import functional.Routes
+import functional.users.UserHandler
+import functional.users.UserService
 import org.springframework.context.support.beans
 import org.springframework.web.reactive.function.server.RouterFunctions
 import org.springframework.web.server.adapter.WebHttpHandlerBuilder

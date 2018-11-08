@@ -1,5 +1,7 @@
 package functional
 
+import functional.common.beans
+import functional.common.dotenv
 import org.springframework.context.support.GenericApplicationContext
 import org.springframework.http.server.reactive.HttpHandler
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
