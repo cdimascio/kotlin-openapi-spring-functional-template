@@ -17,8 +17,8 @@ class Routes(private val userHandler: UserHandler) {
         }
         "/api".nest {
             accept(APPLICATION_JSON).nest {
-                GET("/users", userHandler::findAll)
-                POST("/users", userHandler::create)
+                GET("/users") { userHandler.findAll(it) }
+                POST("/users") { userHandler.create(it) }
             }
         }
         resources("/**", ClassPathResource("static/"))
