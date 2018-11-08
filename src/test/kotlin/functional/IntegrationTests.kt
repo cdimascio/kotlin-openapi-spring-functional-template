@@ -1,15 +1,15 @@
-package functional
+ package functional
 
-import functional.users.User
-import org.junit.jupiter.api.AfterAll
-import org.junit.jupiter.api.BeforeAll
-import org.junit.jupiter.api.Test
-import org.springframework.http.MediaType.APPLICATION_JSON
-import org.springframework.web.reactive.function.client.WebClient
-import org.springframework.web.reactive.function.client.bodyToFlux
-import reactor.test.test
+ import functional.users.User
+ import org.junit.jupiter.api.AfterAll
+ import org.junit.jupiter.api.BeforeAll
+ import org.junit.jupiter.api.Test
+ import org.springframework.http.MediaType.APPLICATION_JSON
+ import org.springframework.web.reactive.function.client.WebClient
+ import org.springframework.web.reactive.function.client.bodyToFlux
+ import reactor.test.test
 
-class IntegrationTests {
+ class IntegrationTests {
 
     private val application = Application(8181)
     private val client = WebClient.create("http://localhost:8181")
@@ -36,4 +36,4 @@ class IntegrationTests {
     fun afterAll() {
         application.stop()
     }
-}
+ }
