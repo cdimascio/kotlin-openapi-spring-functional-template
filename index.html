@@ -21,7 +21,11 @@
 <h2>Build</h2>
 <pre>./gradlew build</pre><h2>Run</h2>
 <pre>./gradlew run</pre><h2>Lint</h2>
-<pre>./gradlew ktlint</pre><h2>Test</h2>
+<pre>## show lint errors
+./gradlew lintKotlin
+
+## Attempt to auto fix lint errors
+./gradlew formatKotlin</pre><h2>Test</h2>
 <pre>./gradlew test</pre><h2>Dist</h2>
 <pre>./gradlew clean distZip</pre><p>Output artifact located at <code>build/distributions</code></p>
 <p>or unpacked</p>
