@@ -40,7 +40,11 @@ clone this repo
 ## Lint
 
 ```shell
-./gradlew ktlint
+## show lint errors
+./gradlew lintKotlin
+
+## Attempt to auto fix lint errors
+./gradlew formatKotlin
 ```
 
 
