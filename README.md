@@ -13,7 +13,7 @@ The template uses:
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true)
 
 ### What's included?
-* Automatic request validation via [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional)
+* Automatic request validation via [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator)
 * Environment based config via [java-dotenv](https://github.com/cdimascio/java-dotenv)
 * Interactive API documentation via [Swagger UI](https://swagger.io/swagger-ui/)
 * Automatic linting via [ktlint](ktlint.github.io)
