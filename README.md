@@ -18,7 +18,7 @@ The template uses:
 * Interactive API documentation via [Swagger UI](https://swagger.io/swagger-ui/)
 * Automatic linting via [ktlint](ktlint.github.io)
 
-Request validation and interactive documentation are based on a Swagger v2 API definition. The definition is located at `main/resources/static/api.json`.
+Request validation and interactive documentation are based on an OpenApi 3.0 or Swagger v2 API specification. The specification is located at `main/resources/static/api.yaml`.
 
 ## Usage
 

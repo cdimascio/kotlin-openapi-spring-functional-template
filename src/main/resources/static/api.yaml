@@ -1,0 +1,50 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Sample application
+  license:
+    name: APL2
+basePath: /api
+schemes:
+- http
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /users:
+    get:
+      tags:
+      - Users
+      description: Get hardcoded users
+      responses:
+        '200':
+          description: Returns the users
+    post:
+      tags:
+      - Users
+      description: Echo back the user specified in the request
+      parameters:
+      - name: user
+        description: The user
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/User'
+      responses:
+        '200':
+          description: Echo the request inputs
+definitions:
+  User:
+    required:
+    - firstname
+    - lastname
+    properties:
+      firstname:
+        type: string
+      lastname:
+        type: string
+    example:
+      firstname: carmine
+      lastname: d
