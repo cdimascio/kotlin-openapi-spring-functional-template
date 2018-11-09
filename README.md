@@ -17,9 +17,18 @@ A project template for *Kotlin Spring WebFlux*. The template features automatic 
 
 Request validation and interactive documentation are based on an OpenApi 3.0 or Swagger v2 API specification. The specification is located at `main/resources/static/api.yaml`.
 
-## Usage
+## Install
 
-clone this repo
+#### Get the template code
+```shell
+git clone --bare https://github.com/cdimascio/kotlin-swagger-spring-functional-template <your-annotator-project-name>
+cd <your-annotator-project-name>
+```
+
+#### (Optional): Create a git repo to track your code
+```shell
+git push --mirror https://github.com/<org>/<your-annotator-project-name>
+```
 
 ## Build
 
