@@ -19,16 +19,7 @@ Request validation and interactive documentation are based on an OpenApi 3.0 or 
 
 ## Install
 
-#### Get the template code
-```shell
-git clone --bare https://github.com/cdimascio/kotlin-swagger-spring-functional-template <your-annotator-project-name>
-cd <your-annotator-project-name>
-```
-
-#### (Optional): Create a git repo to track your code
-```shell
-git push --mirror https://github.com/<org>/<your-annotator-project-name>
-```
+Clone this repo
 
 ## Build
 
