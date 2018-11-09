@@ -9,8 +9,9 @@ The template uses:
 * [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator) to validate API endpoints. It also provides ability to customize the error shape
 * [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
 
-![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.png?raw=tru)
-![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/spring5.png?raw=true)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/cdimascio/kotlin-swagger-spring-functional-template/master/assets/logo.png" width="600"/>
+</p>
 
 ### What's included?
 * Automatic request validation via [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator)
