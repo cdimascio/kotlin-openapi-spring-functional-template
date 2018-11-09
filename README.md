@@ -2,12 +2,7 @@
 
 ![](https://api.travis-ci.org/cdimascio/kotlin-swagger-spring-functional-template.svg?branch=master)![](https://img.shields.io/badge/tests-passing-green.svg)![](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
-A project template for Kotlin Spring WebFlux. The template includes automatic request validation, interactive API documentation, 12-factor compliant environment based config, and built in linting. Interactive API documentation and automatic request validation are executed against a given OpenApi 3.0 or Swagger v2 specification. 
-
-The template uses:
-
-* [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator) to validate API endpoints. It also provides ability to customize the error shape
-* [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
+A project template for Kotlin Spring WebFlux. The template features automatic request validation and interactive API documentation using an OpenApi 3.0 or Swagger 2.0 specification. The template also provides 12-factor compliant environment based config and integrated in linting. 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/cdimascio/kotlin-swagger-spring-functional-template/master/assets/logo.png" width="600"/>
@@ -15,6 +10,7 @@ The template uses:
 
 ### What's included?
 * Automatic request validation via [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator)
+* Custom error responses via [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator)
 * Environment based config via [java-dotenv](https://github.com/cdimascio/java-dotenv)
 * Interactive API documentation via [Swagger UI](https://swagger.io/swagger-ui/)
 * Automatic linting via [ktlint](ktlint.github.io)
