@@ -1,9 +1,9 @@
 buildscript {
     ext {
-        kotlinVersion = '1.2.71'
+        kotlinVersion = '1.3.0'
         springBootVersion = '2.1.0.RELEASE'
         distName = "kotlin-swagger-spring-functional-template"
-        distVersion = '1.3.0'
+        distVersion = '1.4.0'
     }
     repositories {
         jcenter()
@@ -68,12 +68,14 @@ jacocoTestReport {
 
 dependencyManagement {
     imports {
-        mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}")
+        mavenBom("org.springframework.boot:spring-boot-dependencies:${springBootVersion}") {
+            bomProperty("kotlin.version", "1.3.0")
+        }
     }
 }
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:${kotlinVersion}")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
 
     implementation("org.springframework:spring-webflux")
     implementation("org.springframework:spring-context")
