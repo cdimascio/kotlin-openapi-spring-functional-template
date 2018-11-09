@@ -2,7 +2,7 @@
 
 ![](https://api.travis-ci.org/cdimascio/kotlin-swagger-spring-functional-template.svg?branch=master)![](https://img.shields.io/badge/tests-passing-green.svg)![](https://img.shields.io/badge/license-Apache%202.0-blue.svg)
 
-A project template for Kotlin Spring WebFlux. The template features automatic request validation and interactive API documentation using an OpenApi 3.0 or Swagger 2.0 specification. The template also provides 12-factor compliant environment based config and integrated in linting. 
+A project template for *Kotlin Spring WebFlux*. The template features automatic request validation and interactive API documentation using an *OpenApi 3.0* or *Swagger 2.0* specification. The template provides 12-factor compliant environment based config and integrated in linting. 
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/cdimascio/kotlin-swagger-spring-functional-template/master/assets/logo.png" />
