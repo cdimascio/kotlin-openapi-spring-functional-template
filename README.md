@@ -5,7 +5,7 @@
 A project template for Kotlin Spring WebFlux. The template features automatic request validation and interactive API documentation using an OpenApi 3.0 or Swagger 2.0 specification. The template also provides 12-factor compliant environment based config and integrated in linting. 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/cdimascio/kotlin-swagger-spring-functional-template/master/assets/logo.png" width="600"/>
+  <img src="https://raw.githubusercontent.com/cdimascio/kotlin-swagger-spring-functional-template/master/assets/logo.png" />
 </p>
 
 ### What's included?
