@@ -72,8 +72,7 @@ Output artifact located at `build/unpacked/dist`
 Create an unpacked dist. See the [Dist](#dist) section above. Then run it
 
 ```shell
-cp build/unpacked/dist $HOME
-$HOME/kotlin-swagger-spring-functional-1.0.0/bin/kotlin-swagger-spring-functional
+cp build/unpacked/dist $HOME/kotlin-swagger-spring-functional-1.0.0/bin/kotlin-swagger-spring-functional
 
 ```
 
