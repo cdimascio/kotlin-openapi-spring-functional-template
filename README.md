@@ -129,4 +129,4 @@ Navigate to [http://localhost:8080](http://localhost:8080)
  
 ## License
 
-Apache 2
+[Apache 2](LICENSE)
