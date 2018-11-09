@@ -6,7 +6,7 @@ A project template for Kotlin Spring WebFlux. The template includes automatic re
 
 The template uses:
 
-* [swagger-spring-functional](https://github.com/cdimascio/swagger-spring-functional) to validate API endpoints. It also provides ability to customize the error shape
+* [openapi-spring-webflux-validator](https://github.com/cdimascio/openapi-spring-webflux-validator) to validate API endpoints. It also provides ability to customize the error shape
 * [java-dotenv](https://github.com/cdimascio/java-dotenv) for environment based config
 
 ![](https://github.com/cdimascio/kotlin-swagger-spring-functional-template/blob/master/assets/kotlin.png?raw=tru)
