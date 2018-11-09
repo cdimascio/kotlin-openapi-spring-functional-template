@@ -17,12 +17,8 @@ class Routes(private val userHandler: UserHandler) {
         }
         "/api".nest {
             accept(APPLICATION_JSON).nest {
-                // The following 2 lines fail to compile with Kotlin 1.3
-                // GET("/users", userHandler::findAll)
-                // POST("/users", userHandler::create)
-                // Instead, I must use the following O.o
-                GET("/users") { userHandler.findAll(it) }
-                POST("/users") { userHandler.create(it) }
+                GET("/users", userHandler::findAll)
+                POST("/users", userHandler::create)
             }
         }
         resources("/**", ClassPathResource("static/"))
