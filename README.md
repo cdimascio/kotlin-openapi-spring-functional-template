@@ -142,6 +142,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/katielevy1"><img src="https://avatars0.githubusercontent.com/u/8975181?v=4" width="100px;" alt=""/><br /><sub><b>Katie Levy</b></sub></a><br /><a href="https://github.com/cdimascio/kotlin-openapi-spring-functional-template/commits?author=katielevy1" title="Code">💻</a></td>
+    <td align="center"><a href="https://about.me/naxa"><img src="https://avatars0.githubusercontent.com/u/3858548?v=4" width="100px;" alt=""/><br /><sub><b>Paul</b></sub></a><br /><a href="https://github.com/cdimascio/kotlin-openapi-spring-functional-template/commits?author=naXa777" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/ChristofBuechi"><img src="https://avatars1.githubusercontent.com/u/2494089?v=4" width="100px;" alt=""/><br /><sub><b>Christof</b></sub></a><br /><a href="https://github.com/cdimascio/kotlin-openapi-spring-functional-template/commits?author=ChristofBuechi" title="Code">💻</a></td>
   </tr>
 </table>
