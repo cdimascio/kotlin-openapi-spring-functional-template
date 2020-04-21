@@ -2,13 +2,13 @@ package functional
 
 import functional.common.beans
 import functional.common.dotenv
+import java.time.Duration
 import org.springframework.context.support.GenericApplicationContext
 import org.springframework.http.server.reactive.HttpHandler
 import org.springframework.http.server.reactive.ReactorHttpHandlerAdapter
 import org.springframework.web.server.adapter.WebHttpHandlerBuilder
 import reactor.netty.DisposableServer
 import reactor.netty.http.server.HttpServer
-import java.time.Duration
 
 class Application(port: Int = dotenv["PORT"]?.toInt() ?: 8080) {
 
